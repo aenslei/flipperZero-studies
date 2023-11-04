@@ -1,0 +1,20 @@
+REM Script #2: Making a Directory
+REM Desc: Learning new Powershell Commands
+REM Author: Ainsley Cabading
+REM Meant for Windows 10
+
+REM Opening Terminal
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+DELAY 500
+REM ^ It's important to add delays in order to let the GUI load
+
+REM Creating the directory
+
+STRING ni -Path C:\GoodUSBTest_1 -ItemType Directory
+ENTER
+DELAY 1000
+STRING echo Test#2_Completed
+ENTER     
