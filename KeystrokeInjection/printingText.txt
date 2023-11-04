@@ -1,0 +1,18 @@
+REM Script #1: Printing Text on Terminal
+REM Desc: Trying out Keystroke Injections
+REM Author: Ainsley Cabading
+REM Windows 10 PowerShell
+
+REM Opening Terminal
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+DELAY 2000
+
+REM ^ It's important to add delays in order to let the GUI load
+
+REM Doing the echo
+
+STRING echo Test #1
+ENTER
