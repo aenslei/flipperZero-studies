@@ -8,7 +8,7 @@ GUI r
 DELAY 500
 STRING powershell
 ENTER
-DELAY 2000
+DELAY 500
 
 REM ^ It's important to add delays in order to let the GUI load
 
