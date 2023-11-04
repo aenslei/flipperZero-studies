@@ -8,6 +8,7 @@ GUI r
 DELAY 500
 STRING powershell
 ENTER
+DELAY 500
 
 REM Checking if the target file exists
 STRING Test-Path C:\GoodUSBTest\Test1.txt
