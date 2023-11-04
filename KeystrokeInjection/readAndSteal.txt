@@ -22,10 +22,15 @@ REM Making a folder to place the duplicate in
 STRING New-Item -Path C:\CopyTest -ItemType Directory
 ENTER
 
-REM Duplicating file and opening it
+REM Duplicating file
 STRING Copy-Item -Path C:\GoodUSBTest\Test1.txt -Destination C:\CopyTest\CopiedTest1.txt
 ENTER
+
+REM Adding content of the duplicate and opening it
+STRING Add-Content -Path C:\CopyTest\CopiedTest1.txt -Value "This was copied!!"
+ENTER
 STRING ii -Path C:\CopyTest\CopiedTest1.txt
+ENTER
 
 STRING echo Test#4_Completed
 ENTER     
