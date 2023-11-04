@@ -28,7 +28,7 @@ STRING Copy-Item -Path C:\GoodUSBTest\Test1.txt -Destination C:\CopyTest\CopiedT
 ENTER
 
 REM Adding content of the duplicate and opening it
-STRING Add-Content -Path C:\CopyTest\CopiedTest1.txt -Value "This was copied!!"
+STRING Add-Content -Path C:\CopyTest\CopiedTest1.txt -Value "This was copied!! Script#4 work :D good job"
 ENTER
 STRING ii -Path C:\CopyTest\CopiedTest1.txt
 ENTER
