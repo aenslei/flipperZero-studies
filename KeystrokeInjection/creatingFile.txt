@@ -13,12 +13,12 @@ DELAY 500
 REM Creating the directory
 STRING ni -Path C:\GoodUSBTest -ItemType Directory
 ENTER
-DELAY 1000
+DELAY 500
 
 REM Moving to created directory
 STRING cd C:\GoodUSBTest
 ENTER
-DELAY 1000
+DELAY 500
 
 REM Creating the file
 STRING ni -Path C:\GoodUSBTest\Test1.txt -ItemType File
@@ -33,10 +33,10 @@ DELAY 500
 REM Checking if file exists
 STRING Test-Path .\Test1.txt
 ENTER
-DELAY 2000
+DELAY 500
 
 REM Opening File
-STRING ii .\Test.txt
+STRING ii .\Test1.txt
 ENTER
 
 STRING echo Test#3_Completed
