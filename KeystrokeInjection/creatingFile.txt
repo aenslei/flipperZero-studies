@@ -1,0 +1,43 @@
+REM Script #3: Making a Directory, Creating a File and Adding Text Content
+REM Desc: Tryung to create more complicated scripts
+REM Author: Ainsley Cabading
+REM Meant for Windows 10
+
+REM Opening Terminal
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+DELAY 500
+
+REM Creating the directory
+STRING ni -Path C:\GoodUSBTest -ItemType Directory
+ENTER
+DELAY 1000
+
+REM Moving to created directory
+STRING cd C:\GoodUSBTest
+ENTER
+DELAY 1000
+
+REM Creating the file
+STRING ni -Path C:\GoodUSBTest\Test1.txt -ItemType File
+ENTER
+DELAY 500
+
+REM Setting content inside file
+STRING Set-Content -Path .\Test1.txt -Value "Script#3 Works!"
+ENTER
+DELAY 500
+
+REM Checking if file exists
+STRING Test-Path .\Test1.txt
+ENTER
+DELAY 2000
+
+REM Opening File
+STRING ii .\Test.txt
+ENTER
+
+STRING echo Test#3_Completed
+ENTER     
