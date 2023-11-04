@@ -1,0 +1,31 @@
+REM Script #4: Read the content of a file and duplicate it to another folder
+REM Desc: Kinda like stealing the shadow or passwd file HEHE... but layman
+REM Author: Ainsley Cabading
+REM Meant for Windows 10
+
+REM Opening Terminal
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+
+REM Checking if the target file exists
+STRING Test-Path C:\GoodUSBTest\Test1.txt
+ENTER
+
+REM Echoing file contents
+STRING Get-Content -Path C:\GoodUSBTest\Test1.txt
+ENTER
+DELAY 500
+
+REM Making a folder to place the duplicate in
+STRING New-Item -Path C:\CopyTest -ItemType Directory
+ENTER
+
+REM Duplicating file and opening it
+STRING Copy-Item -Path C:\GoodUSBTest\Test1.txt -Destination C:\CopyTest\CopiedTest1.txt
+ENTER
+STRING ii -Path C:\CopyTest\CopiedTest1.txt
+
+STRING echo Test#4_Completed
+ENTER     
