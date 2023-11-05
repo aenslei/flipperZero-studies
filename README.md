@@ -20,3 +20,14 @@ This first folder consists of all my attempts to master Keystroke Injections on 
 **Script #5**: refiningReadAndDupe.txt
 *This was a failed experiment, unfortunately. I had no idea that the FZ BadUSB didn't take in DEFINE and VAR in duckyScript. Sad :(*
 
+**Script #6**: deleteFile.txt
+
+*Deletes a file using an externally downloaded Powershell script and deletes said script after.*
+
+*I learnt a LOT in this script. Look below.*
+
+|: This is the pipe symbol, used to pass the output of one command to the input of another.
+
+%{ ... }: This is an alias for ForEach-Object, and it's used to execute a script block for each object in the pipeline.
+
+$_: This represents the current object in the pipeline, which in this case is the System.Net.WebClient object created earlier.
