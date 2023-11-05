@@ -21,3 +21,4 @@ ENTER
 
 REM Test Case
 STRING echo Script#6 Completed
+ENTER
