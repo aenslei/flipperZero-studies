@@ -2,8 +2,8 @@
 Learning how to create simple USB payloads using duckyScript and Powershell for the Flipper Zero!
 Documenting my self-led journey in learning how to write USB payloads.
 
-# Learning how to do Keystroke Injection
-This first folder consists of all my attempts to master Keystroke Injections on Windows machines
+# Powershell Basics and Keystroke Injection
+This first folder consists of all my attempts to master Powershell and Keystroke Injections on Windows machines
 
 **Script #1**: printingText.txt
 *Self explanatory. I got text echoed on a Powershell CLI.*
