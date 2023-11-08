@@ -2,7 +2,13 @@
 Learning how to create simple USB payloads using duckyScript and Powershell for the Flipper Zero!
 Documenting my self-led journey in learning how to write USB payloads.
 
-# 1. Powershell Basics and Keystroke Injection
+# Wifi
+Consists of all my Wifi-related duckyScripts.
+
+**Script #7**: nearbyNetworks.txt
+*A simple script that enumerates nearby Wifi networks.*
+
+# Powershell Basics and Keystroke Injection
 This first folder consists of all my attempts to master Powershell and Keystroke Injections on Windows machines
 
 **Script #6**: deleteFile.txt
