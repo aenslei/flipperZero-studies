@@ -31,5 +31,3 @@ DELAY 500
 REM Test Case
 STRING echo Script#7 Completed
 ENTER
-STRING exit
-ENTER
